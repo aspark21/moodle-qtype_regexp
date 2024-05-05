@@ -113,7 +113,7 @@ class question_type_test extends \advanced_testcase {
         $cat = $generator->create_question_category([]);
 
         $formdata->category = "{$cat->id},{$cat->contextid}";
-        qtype_regexp_edit_form::mock_submit(([])$formdata);
+        qtype_regexp_edit_form::mock_submit((array())$formdata);
 
         $form = qtype_regexp_test_helper::get_question_editing_form($cat, $questiondata);
 
